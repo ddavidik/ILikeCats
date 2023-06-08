@@ -40,7 +40,7 @@ extension Endpoint {
         if !urlParameters.isEmpty {
             urlComponents.queryItems = urlParameters.map { URLQueryItem(name: $0, value: String(describing: $1)) }
         }
-
+        
         guard let url = urlComponents.url else {
             throw ApiError.invalidUrlComponents
         }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3D03E82F2A30FED600B32371 /* ILikeCatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03E82E2A30FED600B32371 /* ILikeCatsApp.swift */; };
 		3D03E8312A30FED600B32371 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03E8302A30FED600B32371 /* ContentView.swift */; };
-		3D03E8332A30FED700B32371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D03E8322A30FED700B32371 /* Assets.xcassets */; };
 		3D03E8362A30FED700B32371 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D03E8352A30FED700B32371 /* Preview Assets.xcassets */; };
 		3D03E83E2A30FF0700B32371 /* BreedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03E83D2A30FF0700B32371 /* BreedListView.swift */; };
 		3D03E8402A30FFC400B32371 /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03E83F2A30FFC400B32371 /* BreedListViewModel.swift */; };
@@ -30,13 +29,27 @@
 		3D03E86B2A31120F00B32371 /* HorizontalAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03E86A2A31120F00B32371 /* HorizontalAlignment.swift */; };
 		3D03E86E2A31126E00B32371 /* BackgroundGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03E86D2A31126E00B32371 /* BackgroundGradientView.swift */; };
 		3D03E8712A3117C100B32371 /* DiContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03E8702A3117C100B32371 /* DiContainer.swift */; };
+		3D7C3B672A3238AD00379A8D /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C3B662A3238AD00379A8D /* Breed.swift */; };
+		3D7C3B692A323AE400379A8D /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C3B682A323AE400379A8D /* Weight.swift */; };
+		3D7C3B6C2A32422700379A8D /* CatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C3B6B2A32422700379A8D /* CatImage.swift */; };
+		3D7C3B6F2A3248F000379A8D /* BreedListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C3B6E2A3248F000379A8D /* BreedListItemView.swift */; };
+		3D7C3B722A3249DB00379A8D /* Color+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C3B712A3249DA00379A8D /* Color+App.swift */; };
+		3D7C3B742A3249F000379A8D /* Font+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C3B732A3249F000379A8D /* Font+App.swift */; };
+		3D7C3B772A324A8700379A8D /* Satoshi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D7C3B762A324A8700379A8D /* Satoshi.ttf */; };
+		3D7C3B792A324B0A00379A8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7C3B782A324B0A00379A8D /* Assets.xcassets */; };
+		3D7C3B7B2A324CE900379A8D /* ClashDisplay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D7C3B7A2A324CE900379A8D /* ClashDisplay.ttf */; };
+		3D7C3B7E2A324EF400379A8D /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C3B7D2A324EF400379A8D /* BreedDetailView.swift */; };
+		3D7C3B802A324F1A00379A8D /* BreedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C3B7F2A324F1A00379A8D /* BreedDetailViewModel.swift */; };
+		3D7C3B832A32512700379A8D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3D7C3B822A32512700379A8D /* SDWebImage */; };
+		3D7C3B852A32512700379A8D /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3D7C3B842A32512700379A8D /* SDWebImageMapKit */; };
+		3D7C3B882A32516500379A8D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3D7C3B872A32516500379A8D /* SDWebImageSwiftUI */; };
+		3D7C3B8A2A326F7600379A8D /* BreedListGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C3B892A326F7600379A8D /* BreedListGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D03E82B2A30FED600B32371 /* ILikeCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ILikeCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D03E82E2A30FED600B32371 /* ILikeCatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILikeCatsApp.swift; sourceTree = "<group>"; };
 		3D03E8302A30FED600B32371 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3D03E8322A30FED700B32371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D03E8352A30FED700B32371 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D03E83D2A30FF0700B32371 /* BreedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListView.swift; sourceTree = "<group>"; };
 		3D03E83F2A30FFC400B32371 /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
@@ -58,6 +71,18 @@
 		3D03E86A2A31120F00B32371 /* HorizontalAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalAlignment.swift; sourceTree = "<group>"; };
 		3D03E86D2A31126E00B32371 /* BackgroundGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradientView.swift; sourceTree = "<group>"; };
 		3D03E8702A3117C100B32371 /* DiContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiContainer.swift; sourceTree = "<group>"; };
+		3D7C3B662A3238AD00379A8D /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		3D7C3B682A323AE400379A8D /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
+		3D7C3B6B2A32422700379A8D /* CatImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImage.swift; sourceTree = "<group>"; };
+		3D7C3B6E2A3248F000379A8D /* BreedListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListItemView.swift; sourceTree = "<group>"; };
+		3D7C3B712A3249DA00379A8D /* Color+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+App.swift"; sourceTree = "<group>"; };
+		3D7C3B732A3249F000379A8D /* Font+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+App.swift"; sourceTree = "<group>"; };
+		3D7C3B762A324A8700379A8D /* Satoshi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Satoshi.ttf; path = "../../../../../Downloads/ios-vse-summer-semester-2023/RickAndMorty/RickAndMorty/Resources/Fonts/Satoshi.ttf"; sourceTree = "<group>"; };
+		3D7C3B782A324B0A00379A8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/ios-vse-summer-semester-2023/RickAndMorty/RickAndMorty/Resources/Assets.xcassets"; sourceTree = "<group>"; };
+		3D7C3B7A2A324CE900379A8D /* ClashDisplay.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ClashDisplay.ttf; path = "../../../../../Downloads/ios-vse-summer-semester-2023/RickAndMorty/RickAndMorty/Resources/Fonts/ClashDisplay.ttf"; sourceTree = "<group>"; };
+		3D7C3B7D2A324EF400379A8D /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
+		3D7C3B7F2A324F1A00379A8D /* BreedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewModel.swift; sourceTree = "<group>"; };
+		3D7C3B892A326F7600379A8D /* BreedListGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +90,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7C3B882A32516500379A8D /* SDWebImageSwiftUI in Frameworks */,
+				3D7C3B852A32512700379A8D /* SDWebImageMapKit in Frameworks */,
+				3D7C3B832A32512700379A8D /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +118,7 @@
 		3D03E82D2A30FED600B32371 /* ILikeCats */ = {
 			isa = PBXGroup;
 			children = (
+				3D7C3B702A3249C500379A8D /* Styles */,
 				3D03E86F2A31170900B32371 /* DI */,
 				3D03E86C2A31125400B32371 /* Views */,
 				3D03E8412A31008500B32371 /* Api */,
@@ -116,9 +145,9 @@
 		3D03E83C2A30FEE000B32371 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3D7C3B7C2A324EB600379A8D /* BreedDetail */,
+				3D7C3B6D2A3248D800379A8D /* Breeds */,
 				3D03E8302A30FED600B32371 /* ContentView.swift */,
-				3D03E83D2A30FF0700B32371 /* BreedListView.swift */,
-				3D03E83F2A30FFC400B32371 /* BreedListViewModel.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -148,6 +177,7 @@
 		3D03E8542A31047600B32371 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3D7C3B652A32389E00379A8D /* Domain */,
 				3D03E8572A3108FC00B32371 /* Response */,
 				3D03E8552A31049600B32371 /* Constants.swift */,
 			);
@@ -182,7 +212,8 @@
 		3D03E8622A310D4C00B32371 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3D03E8322A30FED700B32371 /* Assets.xcassets */,
+				3D7C3B782A324B0A00379A8D /* Assets.xcassets */,
+				3D7C3B752A324A1700379A8D /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -214,6 +245,54 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
+		3D7C3B652A32389E00379A8D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3D7C3B662A3238AD00379A8D /* Breed.swift */,
+				3D7C3B682A323AE400379A8D /* Weight.swift */,
+				3D7C3B6B2A32422700379A8D /* CatImage.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3D7C3B6D2A3248D800379A8D /* Breeds */ = {
+			isa = PBXGroup;
+			children = (
+				3D03E83F2A30FFC400B32371 /* BreedListViewModel.swift */,
+				3D03E83D2A30FF0700B32371 /* BreedListView.swift */,
+				3D7C3B6E2A3248F000379A8D /* BreedListItemView.swift */,
+				3D7C3B892A326F7600379A8D /* BreedListGridView.swift */,
+			);
+			path = Breeds;
+			sourceTree = "<group>";
+		};
+		3D7C3B702A3249C500379A8D /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				3D7C3B712A3249DA00379A8D /* Color+App.swift */,
+				3D7C3B732A3249F000379A8D /* Font+App.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		3D7C3B752A324A1700379A8D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3D7C3B7A2A324CE900379A8D /* ClashDisplay.ttf */,
+				3D7C3B762A324A8700379A8D /* Satoshi.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3D7C3B7C2A324EB600379A8D /* BreedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3D7C3B7D2A324EF400379A8D /* BreedDetailView.swift */,
+				3D7C3B7F2A324F1A00379A8D /* BreedDetailViewModel.swift */,
+			);
+			path = BreedDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,6 +309,11 @@
 			dependencies = (
 			);
 			name = ILikeCats;
+			packageProductDependencies = (
+				3D7C3B822A32512700379A8D /* SDWebImage */,
+				3D7C3B842A32512700379A8D /* SDWebImageMapKit */,
+				3D7C3B872A32516500379A8D /* SDWebImageSwiftUI */,
+			);
 			productName = ILikeCats;
 			productReference = 3D03E82B2A30FED600B32371 /* ILikeCats.app */;
 			productType = "com.apple.product-type.application";
@@ -258,6 +342,10 @@
 				Base,
 			);
 			mainGroup = 3D03E8222A30FED600B32371;
+			packageReferences = (
+				3D7C3B812A32512700379A8D /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				3D7C3B862A32516500379A8D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 3D03E82C2A30FED600B32371 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -272,8 +360,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7C3B772A324A8700379A8D /* Satoshi.ttf in Resources */,
+				3D7C3B7B2A324CE900379A8D /* ClashDisplay.ttf in Resources */,
 				3D03E8362A30FED700B32371 /* Preview Assets.xcassets in Resources */,
-				3D03E8332A30FED700B32371 /* Assets.xcassets in Resources */,
+				3D7C3B792A324B0A00379A8D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,23 +375,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D03E8312A30FED600B32371 /* ContentView.swift in Sources */,
+				3D7C3B6C2A32422700379A8D /* CatImage.swift in Sources */,
 				3D03E8402A30FFC400B32371 /* BreedListViewModel.swift in Sources */,
+				3D7C3B8A2A326F7600379A8D /* BreedListGridView.swift in Sources */,
 				3D03E8442A3100D500B32371 /* ApiManager.swift in Sources */,
 				3D03E8482A31020E00B32371 /* HttpMethod.swift in Sources */,
 				3D03E84E2A3102B800B32371 /* Response.swift in Sources */,
+				3D7C3B6F2A3248F000379A8D /* BreedListItemView.swift in Sources */,
 				3D03E85B2A31093300B32371 /* PaginationInfo.swift in Sources */,
 				3D03E8532A31039F00B32371 /* BreedEndpoint.swift in Sources */,
 				3D03E8682A3111E700B32371 /* UINavigationController.swift in Sources */,
 				3D03E86E2A31126E00B32371 /* BackgroundGradientView.swift in Sources */,
 				3D03E8652A31119300B32371 /* OnFirstApperViewModifier.swift in Sources */,
+				3D7C3B672A3238AD00379A8D /* Breed.swift in Sources */,
 				3D03E85E2A310B0300B32371 /* Logger.swift in Sources */,
+				3D7C3B802A324F1A00379A8D /* BreedDetailViewModel.swift in Sources */,
 				3D03E86B2A31120F00B32371 /* HorizontalAlignment.swift in Sources */,
+				3D7C3B742A3249F000379A8D /* Font+App.swift in Sources */,
+				3D7C3B692A323AE400379A8D /* Weight.swift in Sources */,
 				3D03E8592A31091100B32371 /* PaginatedResponse.swift in Sources */,
+				3D7C3B722A3249DB00379A8D /* Color+App.swift in Sources */,
 				3D03E84A2A31022F00B32371 /* HttpHeader.swift in Sources */,
 				3D03E8562A31049600B32371 /* Constants.swift in Sources */,
 				3D03E8712A3117C100B32371 /* DiContainer.swift in Sources */,
 				3D03E84C2A31025700B32371 /* ApiError.swift in Sources */,
 				3D03E82F2A30FED600B32371 /* ILikeCatsApp.swift in Sources */,
+				3D7C3B7E2A324EF400379A8D /* BreedDetailView.swift in Sources */,
 				3D03E8512A31033B00B32371 /* URL.swift in Sources */,
 				3D03E8462A3101F400B32371 /* Endpoint.swift in Sources */,
 				3D03E83E2A30FF0700B32371 /* BreedListView.swift in Sources */,
@@ -435,11 +534,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ILikeCats/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ILikeCats/info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,11 +565,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ILikeCats/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ILikeCats/info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,6 +608,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D7C3B812A32512700379A8D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		3D7C3B862A32516500379A8D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D7C3B822A32512700379A8D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D7C3B812A32512700379A8D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		3D7C3B842A32512700379A8D /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D7C3B812A32512700379A8D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		3D7C3B872A32516500379A8D /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D7C3B862A32516500379A8D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D03E8232A30FED600B32371 /* Project object */;
 }

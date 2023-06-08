@@ -31,17 +31,18 @@ class ApiManager: ApiManaging {
         debugPrint("Finished request: \(response)")
                 
         guard let status =  httpResponse?.statusCode, (200...299).contains(status) else {
-            throw APIError.unaceptableStatusCode
+            throw ApiError.unaceptableStatusCode
         }
         
         let decoder = JSONDecoder()
         
         do {
+            print(try decoder.decode(T.self, from: data))
             let result = try decoder.decode(T.self, from: data)
 
             return result
         } catch {
-            throw APIError.decodingFailed(error: error)
+            throw ApiError.decodingFailed(error: error)
         }
     }
 }

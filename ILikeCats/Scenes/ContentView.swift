@@ -9,13 +9,41 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            NavigationView {
+                BreedListView(viewModel: BreedListViewModel())
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
+            .tabItem {
+                Image(systemName: "face.smiling")
+
+                Text("Breeds")
+            }
+
+            NavigationView {
+                Text("LOCATIONS")
+                    .font(.appItemLargeTitle)
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
+            .tabItem {
+                Image(systemName: "globe.europe.africa")
+
+                Text("Locations")
+            }
+
+            NavigationView {
+                Text("LIKES")
+                    .font(.appItemLargeTitle)
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
+            .tabItem {
+                Image(systemName: "heart.text.square")
+
+                Text("Likes")
+            }
         }
-        .padding()
+        .foregroundColor(.appTextBody)
+        .preferredColorScheme(.none)
     }
 }
 
