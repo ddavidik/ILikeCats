@@ -16,30 +16,18 @@ struct ContentView: View {
             .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Image(systemName: "list.bullet")
-
+                
                 Text("Breeds")
             }
-
+            
             NavigationView {
-                Text("LOCATIONS")
-                    .font(.appItemLargeTitle)
+                CatImageView(viewModel: CatImageViewModel())
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
-                Image(systemName: "globe.europe.africa")
-
-                Text("Locations")
-            }
-
-            NavigationView {
-                Text("LIKES")
-                    .font(.appItemLargeTitle)
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
-            .tabItem {
-                Image(systemName: "hand.thumbsup")
-
-                Text("Likes")
+                Image(systemName: "photo")
+                
+                Text("Images")
             }
         }
         .foregroundColor(.appTextBody)

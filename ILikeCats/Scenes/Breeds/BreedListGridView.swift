@@ -12,17 +12,17 @@ struct BreedListGridView: View {
     
     var body: some View {
         AsyncImage(
-            url: breed.image?.url) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 110, height: 110)
-            } placeholder: {
-                let image = UIImage(named: "Sad cat ok")
-                Image(uiImage: image!)
-                    .resizable()
-                    .frame(width: 110, height: 110)
-                    .cornerRadius(8)
+            url: breed.image?.url) { phase in
+                if let image = phase.image {
+                    image
+                        .resizable()
+                        .frame(width: 110, height: 110)
+                        .cornerRadius(8)
+                } else if phase.error != nil {
+                    CatImage.getDefaultImage()
+                } else {
+                    ProgressView()
+                }
             }
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .frame(width: 110, height: 110)

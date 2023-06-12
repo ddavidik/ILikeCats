@@ -14,17 +14,17 @@ struct BreedListItemView: View {
         VStack(alignment: .leading) {
             HStack(alignment: .top, spacing: 16) {
                 AsyncImage(
-                    url: breed.image?.url) { image in
-                        image
-                            .resizable()
-                            .frame(width: 110, height: 110)
-                            .cornerRadius(8)
-                    } placeholder: {
-                        let image = UIImage(named: "Sad cat ok")
-                        Image(uiImage: image!)
-                            .resizable()
-                            .frame(width: 110, height: 110)
-                            .cornerRadius(8)
+                    url: breed.image?.url) { phase in
+                        if let image = phase.image {
+                            image
+                                .resizable()
+                                .frame(width: 110, height: 110)
+                                .cornerRadius(8)
+                        } else if phase.error != nil {
+                            CatImage.getDefaultImage()
+                        } else {
+                            ProgressView()
+                        }
                     }
                 
                 VStack(alignment: .leading, spacing: 4) {
@@ -33,12 +33,12 @@ struct BreedListItemView: View {
                         .foregroundColor(.appTextItemTitle)
                         .multilineTextAlignment(.leading)
                     
-                    Text("Origin: \(breed.origin)\nLife span: \(breed.lifeSpan) years")
+                    Text(breed.origin)
                         .font(.appItemDescription)
-                        .multilineTextAlignment(.leading)
                 }
                 .padding(.vertical, 16)
             }
+            
             Text(breed.description)
                 .font(.appItemDescription)
                 .multilineTextAlignment(.leading)

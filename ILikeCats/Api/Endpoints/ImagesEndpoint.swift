@@ -9,7 +9,7 @@ import Foundation
 
 enum ImagesEndpoint: Endpoint {
     
-    case getImages(id: String)
+    case getImages(id: String? = nil)
     
     var path: String {
         switch self {
@@ -20,8 +20,11 @@ enum ImagesEndpoint: Endpoint {
     
     var urlParameters: [String : String] {
         switch self {
-        case .getImages(let id):
+        case .getImages(let id?):
             return ["breed_ids": id, "limit": "5"]
+            
+        case .getImages:
+            return [:]
         }
     }
 }

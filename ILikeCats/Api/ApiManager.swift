@@ -12,7 +12,7 @@ protocol ApiManaging {
 }
 
 class ApiManager: ApiManaging {
-
+    
     lazy var session: URLSession = {
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForRequest = 30
@@ -29,7 +29,7 @@ class ApiManager: ApiManaging {
         let httpResponse = response as? HTTPURLResponse
         
         debugPrint("Finished request: \(response)")
-                
+        
         guard let status =  httpResponse?.statusCode, (200...299).contains(status) else {
             throw ApiError.unaceptableStatusCode
         }
@@ -39,7 +39,7 @@ class ApiManager: ApiManaging {
         do {
             print(try decoder.decode(T.self, from: data))
             let result = try decoder.decode(T.self, from: data)
-
+            
             return result
         } catch {
             throw ApiError.decodingFailed(error: error)

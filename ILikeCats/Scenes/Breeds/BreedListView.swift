@@ -17,7 +17,7 @@ struct BreedListView: View {
         GridItem(.flexible(), spacing: 10),
         GridItem(.flexible(), spacing: 10)
     ]
-
+    
     func makeList() -> some View {
         LazyVStack(alignment: .leading, spacing: 12) {
             ForEach(viewModel.breeds) { breed in
@@ -102,7 +102,7 @@ extension BreedListView {
             switch self {
             case .list:
                 return Image(systemName: "square.grid.3x3")
-
+                
             case .grid:
                 return Image(systemName: "list.dash")
             }

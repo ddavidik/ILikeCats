@@ -9,29 +9,29 @@ import Foundation
 
 struct Breed: Decodable {
     enum CodingKeys: String, CodingKey {
-            case id
-            case name
-            case origin
-            case countryCode = "country_code"
-            case description
-            case lifeSpan = "life_span"
-            case weight
-            case temperament
-            case image
-            case wikiUrl = "wikipedia_url"
-        }
-
-        let id: String
-        let name: String
-        let origin: String
-        let countryCode: String
-        let description: String
-        let lifeSpan: String
-        let weight: Weight
-        let temperament: String
-        let image: CatImage?
-        let wikiUrl: URL?
+        case id
+        case name
+        case origin
+        case countryCode = "country_code"
+        case description
+        case lifeSpan = "life_span"
+        case weight
+        case temperament
+        case image
+        case wikiUrl = "wikipedia_url"
     }
+    
+    let id: String
+    let name: String
+    let origin: String
+    let countryCode: String
+    let description: String
+    let lifeSpan: String
+    let weight: Weight
+    let temperament: String
+    let image: CatImage?
+    let wikiUrl: URL?
+}
 
 // MARK: - Conformances
 extension Breed: Identifiable {}

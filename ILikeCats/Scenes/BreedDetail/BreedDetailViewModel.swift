@@ -53,5 +53,4 @@ import Foundation
             state = .failed
         }
     }
-    
 }

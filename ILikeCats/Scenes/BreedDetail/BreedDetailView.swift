@@ -11,6 +11,7 @@ struct BreedDetailView: View {
     
     let breed: Breed
     @StateObject var viewModel: BreedDetailViewModel
+    @State var showSafari = false
     
     var body: some View {
         ZStack(alignment: .topLeading) {
@@ -25,7 +26,12 @@ struct BreedDetailView: View {
                         ProgressView()
                     case .fetched:
                         if let images = viewModel.images {
-                            makeImageSlider(images: images)
+                            if (images.count > 0) {
+                                makeImageSlider(images: images)
+                            }
+                            else {
+                                CatImage.getDefaultImage()
+                            }
                         }
                         if let breed = viewModel.breed {
                             makeInfo(breed: breed)
@@ -40,9 +46,16 @@ struct BreedDetailView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 if let url = breed.wikiUrl {
-                    Link("Wiki page", destination: url)
-                        .font(.appItemSmallTitle)
-                        .foregroundColor(.blue)
+                    Button(action: {
+                        self.showSafari = true
+                    }) {
+                        Text("Wiki page")
+                    }
+                    .font(.appItemSmallTitle)
+                    .foregroundColor(.blue)
+                    .sheet(isPresented: $showSafari) {
+                        SafariView(url: url)
+                    }
                 }
             }
         }
@@ -54,19 +67,7 @@ struct BreedDetailView: View {
     }
 }
 
-private extension BreedDetailView {
-    func makeImage(url: URL?) -> some View {
-        AsyncImage(url: url) { image in
-            image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-        } placeholder: {
-            ProgressView()
-        }
-        .frame(maxWidth: .infinity)
-    }
-    
+private extension BreedDetailView {    
     func makeImageSlider(images: [CatImage]) -> some View {
         ImageSlider(images: images)
             .frame(minWidth: UIScreen.main.bounds.size.width, minHeight: 300)
@@ -80,16 +81,20 @@ private extension BreedDetailView {
                 .font(.appSectionTitle)
                 .foregroundColor(.appTextSectionTitle)
             
-            makeInfoRow(title: breed.origin, iconName: "globe")
-            makeInfoRow(title: breed.lifeSpan + " years", iconName: "heart.fill")
-            makeInfoRow(title: breed.weight.metric + " kg", iconName: "scalemass")
+            VStack(alignment: .leading, spacing: 8) {
+                makeInfoRow(title: breed.origin, iconName: "globe")
+                makeInfoRow(title: breed.lifeSpan + " years", iconName: "heart.fill")
+                makeInfoRow(title: breed.weight.metric + " kg", iconName: "scalemass")
+            }
             
             Text("Description")
                 .font(.appSectionTitle)
                 .foregroundColor(.appTextSectionTitle)
             
-            makeInfoRow(title: breed.temperament, iconName: "face.smiling")
-            makeInfoRow(title: breed.description, iconName: "info.square.fill")
+            VStack(alignment: .leading, spacing: 8) {
+                makeInfoRow(title: breed.temperament, iconName: "face.smiling")
+                makeInfoRow(title: breed.description, iconName: "info.circle.fill")
+            }
             
         }
         .padding(8)

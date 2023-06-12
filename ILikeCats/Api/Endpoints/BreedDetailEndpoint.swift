@@ -13,7 +13,7 @@ enum BreedDetailEndpoint: Endpoint {
     
     var path: String {
         switch self {
-        case let .getBreed(id):
+        case .getBreed(let id):
             return "breeds/\(id)"
         }
     }

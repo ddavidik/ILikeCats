@@ -49,7 +49,7 @@ private extension ILikeCatsApp {
         UINavigationBar.appearance().prefersLargeTitles = true
         UINavigationBar.appearance().tintColor = .appTintNavigationBar
     }
-
+    
     func setupTabBarAppearance() {
         let appearance = UITabBarAppearance()
         appearance.configureWithDefaultBackground()
