@@ -12,30 +12,24 @@ struct Breed: Decodable {
             case id
             case name
             case origin
-            case country_code
+            case countryCode = "country_code"
             case description
-            case life_span
+            case lifeSpan = "life_span"
             case weight
-            case child_friendly
-            case dog_friendly
-            case grooming
+            case temperament
             case image
-//            case imageUrls = "images"
-            case wikiUrl = "wiki"
+            case wikiUrl = "wikipedia_url"
         }
 
         let id: String
         let name: String
         let origin: String
-        let country_code: String
+        let countryCode: String
         let description: String
-        let life_span: String
+        let lifeSpan: String
         let weight: Weight
-        let child_friendly: Int
-        let dog_friendly: Int
-        let grooming: Int
+        let temperament: String
         let image: CatImage?
-//        let imageUrls: [URL]
         let wikiUrl: URL?
     }
 
@@ -50,13 +44,11 @@ extension Breed {
         id: "abob",
         name: "American Bobtail",
         origin: "United States",
-        country_code: "US",
+        countryCode: "US",
         description: "American Bobtails are loving and incredibly intelligent cats possessing a distinctive wild appearance. They are extremely interactive cats that bond with their human family with great devotion.",
-        life_span: "11 - 15",
+        lifeSpan: "11 - 15",
         weight: .mock,
-        child_friendly: 4,
-        dog_friendly: 5,
-        grooming: 1,
+        temperament: "Intelligent, Interactive, Lively, Playful, Sensitive",
         image: .mock,
         wikiUrl: URL(string: "https://en.wikipedia.org/wiki/American_Bobtail")!
     )
@@ -67,13 +59,11 @@ extension Breed {
                 id: "abob",
                 name: "American Bobtail - \($0)",
                 origin: "United States",
-                country_code: "US",
+                countryCode: "US",
                 description: "American Bobtails are loving and incredibly intelligent cats possessing a distinctive wild appearance. They are extremely interactive cats that bond with their human family with great devotion.",
-                life_span: "11 - 15",
+                lifeSpan: "11 - 15",
                 weight: .mock,
-                child_friendly: 4,
-                dog_friendly: 5,
-                grooming: 1,
+                temperament: "Intelligent, Interactive, Lively, Playful, Sensitive",
                 image: .mock,
                 wikiUrl: URL(string: "https://en.wikipedia.org/wiki/American_Bobtail")!
             )

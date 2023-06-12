@@ -20,7 +20,7 @@ struct BreedListItemView: View {
                             .frame(width: 110, height: 110)
                             .cornerRadius(8)
                     } placeholder: {
-                        let image = UIImage(named : "Sad cat ok")
+                        let image = UIImage(named: "Sad cat ok")
                         Image(uiImage: image!)
                             .resizable()
                             .frame(width: 110, height: 110)
@@ -33,7 +33,7 @@ struct BreedListItemView: View {
                         .foregroundColor(.appTextItemTitle)
                         .multilineTextAlignment(.leading)
                     
-                    Text("Origin: \(breed.origin)\nLife span: \(breed.life_span)")
+                    Text("Origin: \(breed.origin)\nLife span: \(breed.lifeSpan) years")
                         .font(.appItemDescription)
                         .multilineTextAlignment(.leading)
                 }

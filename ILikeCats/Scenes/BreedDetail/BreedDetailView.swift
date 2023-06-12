@@ -15,7 +15,7 @@ struct BreedDetailView: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             BackgroundGradientView()
-
+            
             ScrollView {
                 VStack(spacing: 16) {
                     switch viewModel.state {
@@ -24,13 +24,14 @@ struct BreedDetailView: View {
                     case .loading:
                         ProgressView()
                     case .fetched:
+                        if let images = viewModel.images {
+                            makeImageSlider(images: images)
+                        }
                         if let breed = viewModel.breed {
-                            makeImage(url: breed.image?.url)
                             makeInfo(breed: breed)
                         }
-                        
                     case .failed:
-                        Text("Sorry, breed fetch failed *sad face emoji*")
+                        Text("Sorry, 🐈 fetch failed *sad face emoji*")
                     }
                 }
             }
@@ -39,7 +40,9 @@ struct BreedDetailView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 if let url = breed.wikiUrl {
-                    Link("Wifi page", destination: url)
+                    Link("Wiki page", destination: url)
+                        .font(.appItemSmallTitle)
+                        .foregroundColor(.blue)
                 }
             }
         }
@@ -63,31 +66,38 @@ private extension BreedDetailView {
         }
         .frame(maxWidth: .infinity)
     }
-
+    
+    func makeImageSlider(images: [CatImage]) -> some View {
+        ImageSlider(images: images)
+            .frame(minWidth: UIScreen.main.bounds.size.width, minHeight: 300)
+            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+    }
+    
     func makeInfo(breed: Breed) -> some View {
         VStack(alignment: .leading, spacing: 16) {
             
-            Text("Info")
+            Text("General")
                 .font(.appSectionTitle)
                 .foregroundColor(.appTextSectionTitle)
-
-            HStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: 16) {
-                    makeInfoRow(title: breed.name, iconName: "person.text.rectangle.fill")
-                    makeInfoRow(title: breed.description, iconName: "text.quote")
-                    makeInfoRow(title: breed.life_span, iconName: "heart.fill")
-                    makeInfoRow(title: breed.origin, iconName: "globe")
-                }
-
-            }
+            
+            makeInfoRow(title: breed.origin, iconName: "globe")
+            makeInfoRow(title: breed.lifeSpan + " years", iconName: "heart.fill")
+            makeInfoRow(title: breed.weight.metric + " kg", iconName: "scalemass")
+            
+            Text("Description")
+                .font(.appSectionTitle)
+                .foregroundColor(.appTextSectionTitle)
+            
+            makeInfoRow(title: breed.temperament, iconName: "face.smiling")
+            makeInfoRow(title: breed.description, iconName: "info.square.fill")
+            
         }
-        .padding(.horizontal, 8)
+        .padding(8)
     }
-
+    
     func makeInfoRow(title: String, iconName: String) -> some View {
         HStack(alignment: .top, spacing: 8) {
             Image(systemName: iconName)
-
             Text(title)
         }
         .font(.appItemDescription)
@@ -95,7 +105,7 @@ private extension BreedDetailView {
     }
 }
 
-struct CharacterDetailView_Previews: PreviewProvider {
+struct BreedDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             BreedDetailView(breed: Breed.mock, viewModel: BreedDetailViewModel(id: "abob"))

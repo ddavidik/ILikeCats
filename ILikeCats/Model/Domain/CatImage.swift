@@ -23,6 +23,7 @@ struct CatImage: Decodable {
 
 // MARK: - Conformances
 extension CatImage: Equatable {}
+extension CatImage: Identifiable {}
 
 // MARK: - Mock
 #if DEBUG

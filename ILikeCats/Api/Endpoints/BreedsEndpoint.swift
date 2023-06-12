@@ -1,5 +1,5 @@
 //
-//  BreedEndpoint.swift
+//  BreedsEndpoint.swift
 //  ILikeCats
 //
 //  Created by Daniel Davidík on 07.06.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum BreedEndpoint: Endpoint {
+enum BreedsEndpoint: Endpoint {
     
     case getBreeds(limit: Int?, page: Int?)
     

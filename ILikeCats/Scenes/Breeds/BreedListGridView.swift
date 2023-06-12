@@ -18,7 +18,7 @@ struct BreedListGridView: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 110, height: 110)
             } placeholder: {
-                let image = UIImage(named : "Sad cat ok")
+                let image = UIImage(named: "Sad cat ok")
                 Image(uiImage: image!)
                     .resizable()
                     .frame(width: 110, height: 110)

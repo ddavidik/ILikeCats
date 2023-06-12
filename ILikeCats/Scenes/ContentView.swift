@@ -15,7 +15,7 @@ struct ContentView: View {
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
-                Image(systemName: "face.smiling")
+                Image(systemName: "list.bullet")
 
                 Text("Breeds")
             }
@@ -37,7 +37,7 @@ struct ContentView: View {
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
-                Image(systemName: "heart.text.square")
+                Image(systemName: "hand.thumbsup")
 
                 Text("Likes")
             }

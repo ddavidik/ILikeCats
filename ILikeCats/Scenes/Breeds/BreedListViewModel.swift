@@ -21,13 +21,13 @@ import Foundation
     @Published var breeds: [Breed] = []
     @Published var state: State = .initial
     
-    
     func fetchMoreIfNeeded(for breed: Breed) async {
         guard breed == breeds.last else {
             return
         }
+        
         state = .fetched(loadingMore: true)
-        await fetch()
+        await fetch(limit: 15)
     }
     
     func load() async {
@@ -37,7 +37,7 @@ import Foundation
     
     func fetch(limit: Int? = nil, page: Int? = nil) async {
         do {
-            let endpoint = BreedEndpoint.getBreeds(limit: limit, page: page)
+            let endpoint = BreedsEndpoint.getBreeds(limit: limit, page: page)
             
             let response: [Breed] = try await apiManager.request(endpoint: endpoint)
             
